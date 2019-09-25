@@ -2,7 +2,7 @@ from socket import *
 
 port = 8080
 
-def createServer():
+def startServer():
     serversocket = socket(AF_INET, SOCK_STREAM)
     try :
         serversocket.bind(('localhost',port))
@@ -30,4 +30,4 @@ def createServer():
     serversocket.close()
 
 print('Listening on port', port)
-createServer()
+startServer()
