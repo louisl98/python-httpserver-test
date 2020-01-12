@@ -1,1 +1,1 @@
-web: python-httpserver-test
+web: python server.py
