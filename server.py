@@ -8,7 +8,7 @@ def startServer():
         serversocket.bind(('localhost',port))
         serversocket.listen(5)
         while(1):
-            (clientsocket, address) = serversocket.accept()
+            (clientsocket, _) = serversocket.accept()
 
             rd = clientsocket.recv(5000).decode()
             pieces = rd.split("\n")
@@ -17,7 +17,7 @@ def startServer():
             data = "HTTP/1.1 200 OK\r\n"
             data += "Content-Type: text/html; charset=utf-8\r\n"
             data += "\r\n"
-            data += "<html><body>Hello World</body></html>\r\n\r\n"
+            data += "<html><body>Test</body></html>\r\n\r\n"
             clientsocket.sendall(data.encode())
             clientsocket.shutdown(SHUT_WR)
 
