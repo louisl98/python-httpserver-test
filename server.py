@@ -29,5 +29,6 @@ def startServer():
 
     serversocket.close()
 
-print('Listening on port', port)
 startServer()
+print('Listening on port', port)
+
